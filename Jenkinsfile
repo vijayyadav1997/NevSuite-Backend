@@ -10,7 +10,7 @@ pipeline {
           steps{
             //git url: '${params.repo}'
             
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/vijayyadav1997/NevSuite-Backend.git"]]])
+            //checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/vijayyadav1997/NevSuite-Backend.git"]]])
             sh "mvn  test"
           }
       }
