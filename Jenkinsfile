@@ -5,8 +5,8 @@ pipeline {
       maven "maven"
    }
    //def selected_url="${params.repo}"
-   /*stages {
-       stage('test'){
+   stages {
+      /* stage('test'){
           steps{
             //git url: '${params.repo}'
             
@@ -16,7 +16,7 @@ pipeline {
       }*/
       stage('Build') {
          steps {
-            sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            sh "mvn -Dmaven.test.failure.ignore=true clean install"
          }
       }
    }
